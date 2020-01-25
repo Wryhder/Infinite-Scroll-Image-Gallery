@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Scroll Image Gallery`,
+    title: `Infinite Scroll Image Gallery`,
     description: `An infinite scroll gallery built with Gatsby, Netlify Functions, and the Unsplash API`,
     author: `@wryhder`,
   },
