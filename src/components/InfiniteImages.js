@@ -17,7 +17,7 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
         {!loading
           ? images.map(image => (
             <div className="image-item" key={image.id}>
-              <img src={image.urls.regular} alt={image.alt.description} />
+                <img src={image.urls.regular} alt={image.alt_description} />
             </div>
           ))
         : ""}
