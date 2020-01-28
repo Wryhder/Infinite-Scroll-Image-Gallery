@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import InfiniteImages from "../components/InfiniteImages"
 
 const Gallery = () => {
   return (
@@ -10,8 +11,9 @@ const Gallery = () => {
       <p style={{ marginBottom: "5%" }}>
         Scroll down for more images from the scifi multiverse...
       </p>
+      <InfiniteImages />
     </Layout>
-    )
+  )
 }
 
 export default Gallery
