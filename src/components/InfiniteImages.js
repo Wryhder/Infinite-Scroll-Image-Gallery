@@ -37,7 +37,7 @@ const InfiniteImages = () => {
   })
 
   // API endpoint
-  const endpoint = "<Endpoint here once available>"
+  const endpoint = "/.netlify/functions/fetch"
 
   // fetch images from functions
   const fetchImages = () => {
