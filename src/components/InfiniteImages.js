@@ -34,7 +34,7 @@ const InfiniteImages = () => {
   // fetch images on component mount
   useEffect(() => {
     fetchImages()
-  }, [])
+  })
 
   // API endpoint
   const endpoint = "<Endpoint here once available>"
