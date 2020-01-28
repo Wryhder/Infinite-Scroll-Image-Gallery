@@ -11,11 +11,8 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
     dataLength={images.length} 
     next={() => fetchImages()} 
     hasMore={true} 
-    loader={
-      <p style={{ textAlign: "center", marginTop: "1%" }}>
-        .....
-      </p>
-    } >
+      loader={<p style={{ textAlign: "center", marginTop: "1%" }}>.....</p>}
+    >
       <div className="image-grid">
         {!loading
           ? images.map(image => (
