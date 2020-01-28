@@ -51,7 +51,7 @@ const InfiniteImages = () => {
   )
 }
 
-ImageGallery.PropTypes = {
+ImageGallery.propTypes = {
   images: PropTypes.array,
   loading: PropTypes.bool,
   fetchImages: PropTypes.func,
