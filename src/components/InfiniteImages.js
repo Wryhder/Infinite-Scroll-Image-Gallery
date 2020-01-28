@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import InfiniteScroll from "react-infinite-scroll-component"
+import axios from "axios"
+
 import "./gallery.css"
 
 const ImageGallery = ({ images, loading, fetchImages }) => {
@@ -27,8 +29,35 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
   )
 }
 
+const infiniteImages = () => {
+  // hold state
+  const [images, setImages] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  // fetch images on component mount
+  useEffect(() => {
+    fetchImages()
+  }, [])
+
+  // API endpoint
+  const endpoint = "<Endpoint here once available>"
+
+  // fetch images from functions
+  const fetchImages = () => {
+    axios(endpoint).then(res => {
+      setImages([...images, ...res.data.images])
+      setLoading(false)
+    })
+  }
+  return (
+    <ImageGallery images={images} loading={loading} fetchImages={fetchImages} />
+  )
+}
+
 ImageGallery.PropTypes = {
   images: PropTypes.array,
   loading: PropTypes.bool,
   fetchImages: PropTypes.func,
 }
+
+export default infiniteImages
