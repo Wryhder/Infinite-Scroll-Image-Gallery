@@ -7,7 +7,9 @@ const Gallery = () => {
     <Layout>
       <SEO title="Gallery" />
       <h1 className="is-size-3">Infinite Scroll Gallery</h1>
-      <p style={{ marginBottom: "5%" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet officiis beatae assumenda, tenetur nulla eius explicabo ea placeat magnam?</p>
+      <p style={{ marginBottom: "5%" }}>
+        Scroll down for more images from the scifi multiverse...
+      </p>
     </Layout>
     )
 }
