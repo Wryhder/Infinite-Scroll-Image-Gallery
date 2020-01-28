@@ -26,7 +26,7 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
   )
 }
 
-const infiniteImages = () => {
+const InfiniteImages = () => {
   // hold state
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true)
@@ -57,4 +57,4 @@ ImageGallery.PropTypes = {
   fetchImages: PropTypes.func,
 }
 
-export default infiniteImages
+export default InfiniteImages
