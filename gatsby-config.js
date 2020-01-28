@@ -1,8 +1,20 @@
+let proxy = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
     title: `Infinite Scroll Image Gallery`,
     description: `An infinite scroll gallery built with Gatsby, Netlify Functions, and the Unsplash API`,
     author: `@wryhder`,
+  },
+  // enables the use of function URLs locally
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: { "/.netlify/functions/": "" },
+      })
+    )
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
