@@ -5,7 +5,7 @@ It uses a [Netlify function](https://functions.netlify.com/) for querying the Un
 
 ## Tech Stack Overview
 
-- HTMl/CSS, [Bulma CSS](https://bulma.io/)
+- HTML/CSS, [Bulma CSS](https://bulma.io/)
 - JavaScript, Axios
 - React, [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
 - Gatsby
